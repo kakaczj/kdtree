@@ -23,6 +23,6 @@ int main() {
 
 	pcl::KdTreeFLANN<V2F> kd_tree_2d;
 	kd_tree_2d.setInputCloud(std::make_shared<pcl::PointCloud<V2F>>(point_cloud_2d));
-	kd_tree_2d.nearestKSearch(V2F(0, 0, 0), 1, indices, sqr_dists);
+	kd_tree_2d.nearestKSearch(V2F(0, 0), 1, indices, sqr_dists);
 	return -1;
 }
